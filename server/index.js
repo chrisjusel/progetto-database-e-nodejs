@@ -45,10 +45,14 @@ function readData(){
 
         }
         console.log('Done.');
-        //API GET
+
+        //apiGet(employees);
+
         app.get('/api/employees', (request, response) => {
             response.json(employees);
         })
+
+
         console.log(employees);
     })
     conn.end(
@@ -58,5 +62,11 @@ function readData(){
         }
     )
 }
+
+/* function apiGet(emp){
+    app.get('/api/employees', (request, response) => {
+        response.json(emp);
+    })
+} */
 
 app.listen(3000, () => console.log('Server arrivo sulla porta 3000'));
